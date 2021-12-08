@@ -1,0 +1,79 @@
+import requests
+
+cookies = {
+    'pgv_info': 'ssid=s9472176168',
+    'pgv_pvid': '311909710',
+    'slgqqcomrouteLine': 'a20210220newstar_a20210824jdls',
+    'tokenParams': '%3Froleid%3D2041623802665%26partition%3D2665%26platid%3D0%26areaid%3D1%26algorithm%3Ditop%26encode%3D2%26channelid%3D1%26nickname%3D%25E9%25A3%258E%26gameid%3D16274%26os%3D2%26ts%3D1638925247%26version%3D5.16.000.4093%26seq%3D16274-D5CB5582-3838-4629-B506-54B17BADE320-1638925247-2494%26sig%3D10223b596ec7882c8c1acf91e1341996%26itopencodeparam%3DBB78D77CEB394306763A7CA7720310541DF8B193806953CE3538EDB55E2D3CDDB99AADC159CACAAE84359453CE018BE6E3BA191B0ED13D7E347853519303C58DF1B41252237DD66852153634FFD34C3B91C0E28051F9B478F76D5704393C4BE5129B7BB2689BBEECADA35E030FD988C4944D2520547BD0C79CA0A0DC8251D476D25236D3776C7188850B0EC3CBDBF42E2D2C0D799A1A78E64A834E5E169462FD02613A18567C54ABFED0899CA843C2F4224DF0296EDD5AC70F3E6C3319E1E0A1D38250DBB618689C38B4CC27F534994A',
+    'isActDate': '18965',
+    'isHostDate': '18965',
+    'ts_uid': '6239562813',
+    'PTTactFirstTime': '1638489600000',
+    'PTTuserFirstTime': '1638489600000',
+    'weekloop': '0-0-0-49',
+    'eas_sid': 'R1m663X8U5C2W6f6A2b1y0N6Y7',
+}
+
+headers = {
+    'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MSDK/5.16.000.4055 mQQAppId/1105371489 mWXAppId/wxce0a39d8e25a6763 mGameId/16274 MSDKDeviceModel/D5CB5582-3838-4629-B506-54B17BADE320',
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Host': 'x8m8.ams.game.qq.com',
+    'Origin': 'https://slg.qq.com',
+    'Referer': 'https://slg.qq.com/ingame/a20211027jdls/page.html?roleid=2041623802665&partition=2665&platid=0&areaid=1&algorithm=itop&encode=2&channelid=1&nickname=%E9%A3%8E&gameid=16274&os=2&ts=1638925247&version=5.16.000.4093&seq=16274-D5CB5582-3838-4629-B506-54B17BADE320-1638925247-2494&sig=10223b596ec7882c8c1acf91e1341996&itopencodeparam=BB78D77CEB394306763A7CA7720310541DF8B193806953CE3538EDB55E2D3CDDB99AADC159CACAAE84359453CE018BE6E3BA191B0ED13D7E347853519303C58DF1B41252237DD66852153634FFD34C3B91C0E28051F9B478F76D5704393C4BE5129B7BB2689BBEECADA35E030FD988C4944D2520547BD0C79CA0A0DC8251D476D25236D3776C7188850B0EC3CBDBF42E2D2C0D799A1A78E64A834E5E169462FD02613A18567C54ABFED0899CA843C2F4224DF0296EDD5AC70F3E6C3319E1E0A1D38250DBB618689C38B4CC27F534994A',
+}
+
+params = (
+    ('ameVersion', '0.3'),
+    ('sServiceType', 'slg'),
+    ('iActivityId', '419927'),
+    ('sServiceDepartment', 'group_g'),
+    ('sSDID', 'b4c62aa5217c07e5f15837c9d13f3620'),
+    ('sMiloTag', 'AMS-MILO-419927-815681-unknown-1638925275409-eByb2W'),
+    ('_', '1638925275417'),
+)
+
+data = {
+  'sArea': '1',
+  'sPlatId': '0',
+  'sPartition': '2665',
+  'gameid': '16274',
+  'os': '2',
+  'channelid': '1',
+  'seq': '16274-D5CB5582-3838-4629-B506-54B17BADE320-1638925247-2494',
+  'ts': '1638925247',
+  'version': '5.16.000.4093',
+  'source': '',
+  'sig': '10223b596ec7882c8c1acf91e1341996',
+  'itopencodeparam': 'BB78D77CEB394306763A7CA7720310541DF8B193806953CE3538EDB55E2D3CDDB99AADC159CACAAE84359453CE018BE6E3BA191B0ED13D7E347853519303C58DF1B41252237DD66852153634FFD34C3B91C0E28051F9B478F76D5704393C4BE5129B7BB2689BBEECADA35E030FD988C4944D2520547BD0C79CA0A0DC8251D476D25236D3776C7188850B0EC3CBDBF42E2D2C0D799A1A78E64A834E5E169462FD02613A18567C54ABFED0899CA843C2F4224DF0296EDD5AC70F3E6C3319E1E0A1D38250DBB618689C38B4CC27F534994A',
+  'isGopenid': '',
+  'gameId': '',
+  'iSex': '',
+  'sRoleId': '2041623802665',
+  'iGender': '',
+  'appid': '',
+  'area': '1',
+  'platId': '0',
+  'partition': '2665',
+  'roleid': '',
+  'sOpenId': '',
+  'openid': '',
+  'timestamp': '',
+  'iMatchSort': '1',
+  'sServiceType': 'slg',
+  'objCustomMsg': '',
+  'areaname': '',
+  'rolelevel': '',
+  'rolename': '',
+  'areaid': '',
+  'iActivityId': '419927',
+  'iFlowId': '815681',
+  'g_tk': '1842395457',
+  'e_code': '0',
+  'g_code': '0',
+  'eas_url': 'http://slg.qq.com/ingame/a20211027jdls/page.html',
+  'eas_refer': 'http://slg.qq.com/ingame/a20211027jdls/?reqid=2fa1f186-6bda-4d4e-ac3b-46a39863a173&version=24',
+  'sServiceDepartment': 'group_g'
+}
+
+response = requests.post('https://x8m8.ams.game.qq.com/ams/ame/amesvr', headers=headers, params=params, cookies=cookies, data=data, verify=False)
+print(response.json())
